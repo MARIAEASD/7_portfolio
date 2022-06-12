@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio_maria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Playfair+Display:ital,wght@0,400;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 10px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        a{
+            font-family: 'Merriweather', serif;
+            font-family: 'Playfair Display', serif;
+            text-transform: uppercase;
+            color: var(--blanco);
+        }
+        :root{
+            --negro: #000000;
+            --azuloscuro: #0B0A3F;
+            --blanco: #FFFFFF;
+            --gris: #e5e5e5;
+            --merryweather: 'Merriweather', serif;
+            --andanapro: 'Andada Pro', serif;
+            --negrita: 600;
+            background-image: url(img/ooooo.jpg);
+        }
+        .container{
+            padding: 0 2em;
+            column-count: 2;
+        }
+        body>header{
+            display: flex;
+            padding: 60px 0;
+            text-align: center;
+            height: 100vh;
+            background-color: var(--azuloscuro);
+            column-count: 2;
+            background-image: url(img/portada.jpg);
+        }
+        header .container{
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        hgroup{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+                        column-count: 2;
+        }
+        h1{
+            font-size: 1.5em;
+            margin: 6em 0 1em 0;
+            font-family: var(--merryweather);
+            font-weight: var(--negrita);
+            color: var(--blanco);
+        }
+        h2{
+            font-size: 1em;
+            font-family: var(--andanapro);
+            color: white;
+            width: 50%;
+        }
+        h3{
+            align-items: center;
+            font-family: var(--merryweather);
+            margin: 0 1em -2em -2em;
+        }       
+        h4{
+            margin: 0 15em 2em 2em;
+            font-weight: var(--negrita);
+            font-size: 0.75em;
+        }
+        h5{
+            font-family: var(--merryweather);
+        }
+        p{
+            margin: 0 15em 2em 2em;
+            color: var(--azuloscuro);
+            background-color: beige;
+            font-size: 0.75em;
+        }
+        nav{
+            display: flex;
+            padding: 1em 3em;
+            width: 100%;
+            justify-content: space-between;
+        }
+        nav a{
+            font-size: 0.75em;
+            color: var(--blanco);
+        }
+        section:first-child .container{
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: var(--negro);
+            color: white;
+        }
+        section:last-child .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /*ABOUT ME*/
+        .card_aboutme{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            margin: 1em;
+            padding: 0.75em;
+            width: 300px;
+        }
+        .aboutme_img{
+            width: 300px;
+            height: 300px;
+            align-items: center;
+            margin: 0 -2em 2em 0em;
+            display: flex;
+        }
+        .aboutme_img img{
+            align-items: center;
+            display: flex;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            
+        }
+        /*PROJECTS*/
+        .card_projects{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 1em;
+            padding: 0.75em;
+            align-items: center;
+            width: 300px;
+            box-shadow: var(--negro) 0px 0px 15px;
+        }
+        .card_projects nav a{
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            color: var(--azuloscuro);
+            font-family: var(--merryweather);
+            font-weight: var(--negrita);
+            font-size: 1.5em;
+        }
+        .projects_img{
+            width: 250px;
+            height: 250px;
+        }
+        .card_projects header{
+            margin: 0.75em 0 0 0;
+            text-align: center;
+            font-size: 0.7em;
+        }
+        section:last-child{
+            display: flexbox;
+            padding: 6px 0;
+            height: 100%;
+            background-color: var(--gris);
+            color: var(--negro);
+        }
+        footer{
+            padding: 6px 0;
+            height: 50vh;
+            background-color: var(--azuloscuro);
+            color: white;
+            font-size: 0.75em;
+        }
+        footer .container{
+            display: flex;
+            font-size: 1em;
+        }
+        footer ul li{
+            font-family: var(--merryweather);
+            font-size: 0.6em;
+            color: white;
+            display: flex;
+        }
+        @media (max-width: 1700px){
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 32px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        a{
+            font-family: var(--merryweather);
+            text-transform: uppercase;
+            color: var(--blanco);
+        }
+        :root{
+            --negro: #000000;
+            --verde: #8aaa8f;
+            --grisclaro: #303030;
+            --blanco: #FFFFFF;
+            --gris: #e5e5e5;
+            --opensans: 'Open Sans', sans-serif;
+            --andanapro: 'Andada Pro', serif;
+            --negrita: 600;
+        }
+        .container{
+            padding: 0 2em;
+        }
+        body>header{
+            display: flex;
+            padding: 60px 0;
+            text-align: center;
+            height: 100vh;
+            background-color: var(--azuloscuro);
+        }
+        header .container{
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        hgroup{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+        h1{
+            font-size: 1.5em;
+            margin: 6em 0 1em 0;
+            font-family: var(--merryweather);
+            font-weight: var(--negrita);
+            color: var(--blanco);
+        }
+        h2{
+            font-size: 1em;
+            font-family: var(--merryweather);
+            color: white;
+            width: 50%;
+        }
+        h3{
+            margin: 2em 0 1em 0;
+            font-family: var(--merryweather);
+            text-align: center;
+        }       
+        h4{
+            margin: 0 2em 0.2em 2em;
+            font-weight: var(--negrita);
+            text-align: center;
+            font-size: 0.75em;
+        }
+        h5{
+            font-family: var(--merryweather);
+        }
+        p{
+            margin: 0 2em 0.3em 2em;
+            color: var(--azuloscuro);
+            text-align: center;
+            font-size: 0.75em;
+        }
+        nav{
+            display: flex;
+            padding: 1em 2em;
+            width: 100%;
+            justify-content: space-between;
+        }
+        nav a{
+            font-size: 0.5em;
+        }
+        section:first-child .container{
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: var(--negro);
+            color: white;
+        }
+        section:last-child .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /*ABOUT ME*/
+        .card_aboutme{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            margin: 1em;
+            padding: 0.75em;
+            width: 300px;
+        }
+        .aboutme_img{
+            width: 300px;
+            height: 300px;
+            /*margin: 0 -9em 2em 0em;*/
+            display: flex;
+        }
+        .aboutme_img img{
+            display: flex;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+        }
+        /*PROJECTS*/
+        .card_projects{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 1em;
+            padding: 0.75em;
+            align-items: center;
+            width: 300px;
+            box-shadow: var(--negro) 0px 0px 15px;
+        }
+        .projects_img{
+            width: 250px;
+            height: 250px;
+        }
+        .card_projects header{
+            margin: 0.75em 0 0 0;
+            text-align: center;
+            font-size: 0.7em;
+        }
+        .card_projects nav a{
+            display: flex;
+            /*text-align: center;*/
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            color: var(--azuloscuro);
+            font-family: var(--merryweather);
+            font-weight: var(--negrita);
+            font-size: 1.5em;
+        }
+        section:last-child{
+            display: flexbox;
+            padding: 6px 0;
+            height: 100%;
+            background-color: var(--gris);
+            color: var(--negro);
+        }
+        footer{
+            padding: 6px 0;
+            height: 50vh;
+            background-color: var(--azuloscuro);
+            color: white;
+        }
+        footer .container{
+            display: flex;
+            justify-content: center;
+        }
+        footer ul li{
+            font-family: var(--merryweather);
+            font-size: 0.6em;
+            color: white;
+        }
+        }
+        @media (max-width: 600px){
+            h4{
+            margin: 0 3em 2em 2em;
+            font-weight: var(--negrita);
+            }
+            p{
+            margin: 0 3em 2em 2em;
+            color: var(--azuloscuro);
+            }
+            h1{
+                align-items: center;
+                justify-content: center;
+            }
+            a{
+                font-size: 3px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <hgroup>
+                <h1>maria</h1>
+                <h2></h2>
+            </hgroup>
+            <nav>
+                <a href="#aboutme">About me</a>
+                <a href="#projects">Projects</a>
+                <a href="#contactme">Contact me</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+            <section id="#aboutme">
+                <h3>About me</h3>
+                <header>
+                    <h4>My name is Maria and I am 19 years old.</h4>
+                    <P>I am studing Graphic Desing at the EASD and I live in Alcoy.</P>
+                </header>
+                <div class="card_aboutme">
+                    <div class="aboutme_img">
+                        <img src="img/-MG-0204.jpg" width="300px" height="400px" t>
+                    </div>
+                </div>
+            </section>
+            <section id="#projects">
+                <h3>Projects</h3>
+                <P>These are 6 projects made between September and January this year. As a result, I have learnt about html and css programming.</P>
+                <h4>In these months we have been able to learn how to program web pages by placing text, images, videos...
+                    In these projects you can see the personal evolution working on html and css.</h4>
+                <div class="container">
+                    <div class="card_projects">
+                        <div class="projects_img">
+                            <img src="img/1.jpg" alt="">
+                        </div>
+                        <nav>
+                                <a href="pages/index1.html">1</a>
+                        </nav>
+                        <header>
+                            <h5>WEBSITE</h5>
+                            <blockquote>
+                                @ deltellcm
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_projects">
+                        <div class="projects_img">
+                            <img src="img/2.jpg" alt="">
+                        </div>
+                        <nav>
+                                <a href="pages/2_llocweb_img/index.html">2</a>
+                        </nav>
+                        <header>
+                            <h5>WEBSITE_LINK</h5>
+                            <blockquote>
+                                @ deltellcm
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_projects">
+                        <div class="projects_img">
+                            <img src="img/3.jpg" alt="">
+                        </div>
+                        <nav>
+                                <a href="pages/3_llocweb_video/index.html">3</a>
+                        </nav>
+                        <header>
+                            <h5>IMG_VIDEO_AUDIO</h5>
+                            <blockquote>
+                                @ deltellcm
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_projects">
+                        <div class="projects_img">
+                            <img src="img/4.jpg" alt="">
+                        </div>
+                        <nav>
+                                <a href="pages/4_gallery/sitioweb/index.html">4</a>
+                        </nav>
+                        <header>
+                            <h5>GALLERY</h5>
+                            <blockquote>
+                                @ deltellcm
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_projects">
+                        <div class="projects_img">
+                            <img src="img/5.jpg" alt="">
+                        </div>
+                        <nav>
+                                <a href="pages/index5 (2).html">5</a>
+                        </nav>
+                        <header>
+                            <h5>GRID</h5>
+                            <blockquote>
+                                @ deltellcm
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_projects">
+                        <div class="projects_img">
+                            <img src="img/6.jpg" alt="">
+                        </div>
+                        <nav>
+                                <a href="pages/6_neoplasticismo/sitioweb/index.html">6</a>
+                        </nav>
+                        <header>
+                            <h5>NEOPLASTICISM</h5>
+                            <blockquote>
+                                @ deltellcm
+                            </blockquote>
+                        </header>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <footer id="#contactMe">
+            <h3>Contact me</h3>
+            <div class="container">
+                <ul>
+                    <li>deltellcml@easdalcoy.es</li>
+                    <li>@cdeltellcasanovamaria</li>
+                    <li>+36 601345688</li>
+                </ul>
+            </div>
+    </footer>
+</body>
+</html>

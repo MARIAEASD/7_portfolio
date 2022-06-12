@@ -1,0 +1,10 @@
+detalle
+espuma
+estrella
+fondo
+general
+ola
+oleaje
+oscuro
+profundidad
+reflejo
